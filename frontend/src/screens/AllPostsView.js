@@ -24,7 +24,7 @@ export default function AllPostsViews() {
 
   
   useEffect(() => {
-    axios.get('http://127.0.0.1:8000/restapi/posts')
+    axios.get('https://cs50network.herokuapp.com/restapi/posts')
     .then(res => {
         setPosts(res.data);
         setCurrentPosts(res.data.slice(firstIndex, lastIndex));
@@ -44,7 +44,7 @@ export default function AllPostsViews() {
 
   function handleNewPost(event) {
     event.preventDefault();
-    axios.post('http://127.0.0.1:8000/restapi/posts', {
+    axios.post('https://cs50network.herokuapp.com/restapi/posts', {
     "content": content
     })
     .then(() => {

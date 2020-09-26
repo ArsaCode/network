@@ -22,7 +22,7 @@ export default function FollowingsView() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-      axios.get(`http://127.0.0.1:8000/restapi/user/${contextValue.user.username}/followings`)
+      axios.get(`https://cs50network.herokuapp.com/restapi/user/${contextValue.user.username}/followings`)
       .then(res => {
       setPosts(res.data);
       setCurrentPosts(res.data.slice(firstIndex, lastIndex));

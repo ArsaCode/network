@@ -12,7 +12,7 @@ export default function LoginView(props) {
 
   function handleLogin(event) {
     event.preventDefault();
-    axios.post('http://127.0.0.1:8000/restauth/login', {
+    axios.post('https://cs50network.herokuapp.com/restauth/login', {
     "username":username,
     "password":password
     })

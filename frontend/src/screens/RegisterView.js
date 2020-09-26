@@ -11,7 +11,7 @@ export default function RegisterView() {
 
     function handleRegister(event) {
         event.preventDefault();
-        axios.post('http://127.0.0.1:8000/restauth/register', {
+        axios.post('https://cs50network.herokuapp.com/restauth/register', {
         "username":username,
         "email": email,
         "password":password,

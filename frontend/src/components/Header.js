@@ -12,7 +12,7 @@ export default function Header() {
 
     const handleLogout = (event) => {
         event.preventDefault()
-        axios.post('http://127.0.0.1:8000/restauth/logout')
+        axios.post('https://cs50network.herokuapp.com/restauth/logout')
         .then(() => {
             contextValue.updateIsLogged(false)
             window.location.href = "/"

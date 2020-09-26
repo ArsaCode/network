@@ -19,7 +19,7 @@ export default function Post(props) {
 
   const handleLike = (event) => {
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/restapi/post/${post.id}/like`)
+    axios.put(`https://cs50network.herokuapp.com/restapi/post/${post.id}/like`)
       .then(res => {
         setPost(res.data);
       })
@@ -27,7 +27,7 @@ export default function Post(props) {
 
   const handleDelete = (event) => {
     event.preventDefault();
-    axios.delete(`http://127.0.0.1:8000/restapi/post/${post.id}`)
+    axios.delete(`https://cs50network.herokuapp.com/restapi/post/${post.id}`)
       .then(() => {
         window.location.href = "/";
       })
@@ -40,7 +40,7 @@ export default function Post(props) {
 
   const handleEdit = (event) => {
     event.preventDefault();
-    axios.put(`http://127.0.0.1:8000/restapi/post/${post.id}`, {
+    axios.put(`https://cs50network.herokuapp.com/restapi/post/${post.id}`, {
       "content": content
     })
     .then((res) => {
