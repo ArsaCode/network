@@ -1,6 +1,9 @@
 # Virtual env
 /venv
 
+# Database
+/db.sqlite3
+
 # VSCode config
 /.vscode
 
